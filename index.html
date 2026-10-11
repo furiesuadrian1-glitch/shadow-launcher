@@ -6,10 +6,6 @@
     <title>Shadow Launcher - Ultimate Minecraft Launcher</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Firebase SDK-k betöltése -->
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
 <body>
 
@@ -24,14 +20,7 @@
             <li><a href="#support">Support Us</a></li>
         </ul>
         <div class="auth-buttons">
-            <button class="btn btn-outline" id="loginBtn" onclick="openModal('login')">Log In</button>
-            <button class="btn btn-primary" id="registerBtn" onclick="openModal('register')">Register</button>
-            <div id="userProfileBadge" class="user-badge hidden" onclick="toggleProfileMenu()">
-                <span id="badgeUsername">Player</span>
-                <div class="dropdown-menu" id="profileDropdown">
-                    <a href="#" onclick="logout()">Logout</a>
-                </div>
-            </div>
+            <a href="https://discord.gg/J7df2A7zb" target="_blank" class="btn btn-discord">Discord Server 🎮</a>
         </div>
     </nav>
 
@@ -84,29 +73,6 @@
             <a href="https://discord.gg/J7df2A7zb" target="_blank" class="btn btn-discord btn-full" style="text-decoration: none; display: block; text-align: center;">Join Discord 🎮</a>
         </div>
     </section>
-
-    <!-- AUTH MODAL (LOGIN / REGISTER) -->
-    <div id="authModal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="tab-buttons">
-                <button id="loginTab" class="tab-btn active" onclick="switchTab('login')">Log In</button>
-                <button id="registerTab" class="tab-btn" onclick="switchTab('register')">Register</button>
-            </div>
-
-            <form id="authForm" onsubmit="handleAuth(event)">
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="name@example.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="••••••••" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full" id="submitAuthBtn">Log In</button>
-            </form>
-        </div>
-    </div>
 
     <footer>
         <p>&copy; 2026 Shadow Launcher. Not affiliated with Mojang or Microsoft.</p>

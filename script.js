@@ -100,4 +100,5 @@ function logout() {
     auth.signOut().then(() => {
         alert('Sikeres kijelentkezés!');
     });
-}
+}// Eredeti sima JavaScript - nincs semmilyen külső függőség vagy bejelentkezési logika
+console.log("Shadow Launcher website loaded successfully.");
